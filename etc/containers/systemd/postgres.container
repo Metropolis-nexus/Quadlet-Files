@@ -3,17 +3,17 @@ Description=Vaultwarden PostgreSQL
 PartOf=vaultwarden.target
 
 [Container]
-ContainerName=vaultwarden-postgres
+ContainerName=postgres
 Image=ghcr.io/polarix-containers/postgres:17
 AutoUpdate=registry
 
-Network=vaultwarden--vaultwarden-postgres.network
+Network=vaultwarden.network
 
-Volume=/srv/vaultwarden-postgres:/var/lib/postgresql/data:Z
+Volume=/srv/vaultwarden/postgres:/var/lib/postgresql/data:Z
 ReadOnly=true
 Mount=type=tmpfs,tmpfs-size=50M,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/var/run/postgresql
 
-EnvironmentFile=/srv/vaultwarden-postgres.env
+EnvironmentFile=/srv/vaultwarden/postgres.env
 User=200012
 Group=200012
 

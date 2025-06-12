@@ -1,8 +1,8 @@
 [Unit]
 Description=Vaultwarden
 PartOf=vaultwarden.target
-After=vaultwarden-postgres.service
-Wants=vaultwarden-postgres.service
+After=postgres.service
+Wants=postgres.service
 
 [Container]
 ContainerName=vaultwarden
@@ -10,12 +10,12 @@ Image=ghcr.io/polarix-containers/vaultwarden:latest
 AutoUpdate=registry
 
 PublishPort=8080:8080
-Network=vaultwarden--vaultwarden-postgres.network
+Network=vaultwarden.network
 
-Volume=/srv/vaultwarden:/data:Z
+Volume=/srv/vaultwarden/vaultwarden:/data:Z
 ReadOnly=true
 
-EnvironmentFile=/srv/vaultwarden.env
+EnvironmentFile=/srv/vaultwarden/vaultwarden.env
 User=200003
 Group=200003
 
