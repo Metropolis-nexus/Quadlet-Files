@@ -15,7 +15,6 @@ Network=vaultwarden--vaultwarden-postgres.network
 Volume=/srv/vaultwarden:/data:Z
 ReadOnly=true
 
-EnvironmentFile=/srv/vaultwarden-postgres.env
 EnvironmentFile=/srv/vaultwarden.env
 User=200003
 Group=200003
