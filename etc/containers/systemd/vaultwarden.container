@@ -25,9 +25,6 @@ DropCapability=ALL
 [Service]
 LockPersonality=true
 ProtectClock=true
-ProtectHostname=true
-ProtectKernelModules=true
-ProtectSystem=full
 RestrictRealtime=true
 RuntimeDirectoryMode=700
 SystemCallArchitectures=native
