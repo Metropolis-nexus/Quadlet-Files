@@ -3,7 +3,7 @@ Description=Vaultwarden PostgreSQL
 PartOf=vaultwarden.target
 
 [Container]
-ContainerName=postgres
+ContainerName=vaultwarden-postgres
 Image=ghcr.io/polarix-containers/postgres:17
 AutoUpdate=registry
 

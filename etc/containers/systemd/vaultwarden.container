@@ -1,8 +1,8 @@
 [Unit]
 Description=Vaultwarden
 PartOf=vaultwarden.target
-After=postgres.service
-Wants=postgres.service
+After=vaultwarden-postgres.service
+Wants=vaultwarden-postgres.service
 
 [Container]
 ContainerName=vaultwarden
