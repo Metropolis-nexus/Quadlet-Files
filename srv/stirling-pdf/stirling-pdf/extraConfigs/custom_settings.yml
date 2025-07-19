@@ -1,0 +1,24 @@
+security:
+  enableLogin: false
+
+mail:
+  enabled: false
+
+system:
+  defaultLocale: en-US
+  googlevisibility: false # Handled by NGINX reverse proxy
+  enableAlphaFunctionality: false
+  showUpdate: false
+  customHTMLFiles: false
+  enableAnalytics: false
+  enableUrlToPDF: false
+  disableSanitize: false
+  fileUploadLimit: '100M'
+
+ui:
+  appName: 'Metropolis PDF'
+  homeDescription: 'Running Polarix Container''s ultra-lite FOSS build of Stirling-PDF'
+  appNameNavbar: 'Metropolis PDF'
+
+metrics:
+  enabled: false
