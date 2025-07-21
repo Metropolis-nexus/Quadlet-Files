@@ -16,6 +16,7 @@ Volume=/srv/stirling-pdf/stirling-pdf/customFiles:/customFiles:Z
 Volume=/srv/stirling-pdf/stirling-pdf/logs:/logs:Z
 Volume=/srv/stirling-pdf/stirling-pdf/pipeline:/pipeline:Z
 ReadOnly=true
+Mount=type=tmpfs,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/tmp
 
 User=200013
 Group=200013
