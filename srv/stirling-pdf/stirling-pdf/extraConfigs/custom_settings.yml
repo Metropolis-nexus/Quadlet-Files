@@ -13,7 +13,7 @@ system:
   enableAnalytics: false
   enableUrlToPDF: false
   disableSanitize: false
-  fileUploadLimit: '100M'
+  fileUploadLimit: '100MB'
 
 ui:
   appName: 'Metropolis PDF'
