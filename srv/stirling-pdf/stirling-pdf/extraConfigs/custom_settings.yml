@@ -4,14 +4,6 @@ security:
 mail:
   enabled: false
 
-# Overwriting with empty strings does not work
-legal:
-  termsAndConditions: '/'
-  privacyPolicy: '/'
-  accessibilityStatement: '/'
-  cookiePolicy: '/'
-  impressum: '/'
-
 system:
   defaultLocale: en-US
   googlevisibility: false # Handled by NGINX reverse proxy
