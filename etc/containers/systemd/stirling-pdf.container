@@ -12,7 +12,7 @@ Network=stirling-pdf.network
 
 Volume=/srv/stirling-pdf/stirling-pdf/trainingData:/usr/share/tessdata:Z
 Volume=/srv/stirling-pdf/stirling-pdf/extraConfigs:/configs:Z
-Volume=/srv/stirling-pdf/stirling-pdf/customFiles:/customFiles:Z
+Volume=/srv/stirling-pdf/stirling-pdf/customFiles:/customFiles:Z,ro
 Volume=/srv/stirling-pdf/stirling-pdf/logs:/logs:Z
 Volume=/srv/stirling-pdf/stirling-pdf/pipeline:/pipeline:Z
 ReadOnly=true
