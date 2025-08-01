@@ -1,2 +1,9 @@
 <footer th:fragment="footer" id="footer">
+  <script>
+    // Remove "Upgrade to Pro" button
+    if(document.querySelector(".go-pro-link")) document.querySelector(".go-pro-link").parentElement.remove();
+
+    // Hide "New and recently updated" section
+    if(document.getElementById("groupRecent")) document.getElementById("groupRecent").style.display = "none";
+  </script>
 </footer>
