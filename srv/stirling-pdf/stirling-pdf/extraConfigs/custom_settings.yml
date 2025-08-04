@@ -17,7 +17,7 @@ system:
 
 ui:
   appName: 'Metropolis PDF'
-  homeDescription: 'Running Polarix Container''s ultra-lite FOSS build of Stirling-PDF'
+  homeDescription: 'Running Polarix Containers'' ultra-lite FOSS build of Stirling-PDF'
   appNameNavbar: 'Metropolis PDF'
 
 metrics:
