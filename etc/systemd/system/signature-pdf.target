@@ -1,5 +1,5 @@
 [Unit]
-Description=Stirling-PDF stack
+Description=Signature-PDF stack
 After=multi-user.target rescue.service rescue.target
 Requires=multi-user.target
 
