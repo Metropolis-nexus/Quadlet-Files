@@ -27,4 +27,4 @@ SystemCallFilter=~@obsolete
 Restart=always
 
 [Install]
-WantedBy=stirling-pdf.target
+WantedBy=signature-pdf.target
