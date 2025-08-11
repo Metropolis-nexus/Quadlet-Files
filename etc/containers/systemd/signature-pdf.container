@@ -7,7 +7,7 @@ ContainerName=signature-pdf
 Image=docker.io/xgaia/signaturepdf
 AutoUpdate=registry
 
-PublishPort=8080:80
+PublishPort=8080:80/tcp
 Network=signature-pdf.network
 
 Volume=/srv/signature-pdf/signature-pdf:/data:Z

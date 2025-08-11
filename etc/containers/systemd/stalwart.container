@@ -9,11 +9,10 @@ ContainerName=stalwart
 Image=ghcr.io/stalwartlabs/stalwart:latest-alpine
 AutoUpdate=registry
 
-PublishPort=127.0.0.1:8443:443
-PublishPort=465:465
-PublishPort=587:587
-PublishPort=25:25
-PublishPort=993:993
+PublishPort=127.0.0.1:8443:443/tcp
+PublishPort=465:465/tcp
+PublishPort=587:587/tcp
+PublishPort=993:993/tcp
 Network=stalwart.network
 
 Volume=/srv/stalwart/stalwart:/opt/stalwart:Z

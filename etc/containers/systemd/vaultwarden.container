@@ -9,7 +9,7 @@ ContainerName=vaultwarden
 Image=ghcr.io/polarix-containers/vaultwarden:latest
 AutoUpdate=registry
 
-PublishPort=8080:8080
+PublishPort=8080:8080/tcp
 Network=vaultwarden.network
 
 Volume=/srv/vaultwarden/vaultwarden:/data:Z

@@ -7,7 +7,7 @@ ContainerName=stirling-pdf
 Image=ghcr.io/polarix-containers/stirling-pdf:ultra-lite
 AutoUpdate=registry
 
-PublishPort=8080:8080
+PublishPort=8080:8080/tcp
 Network=stirling-pdf.network
 
 Volume=/srv/stirling-pdf/stirling-pdf/trainingData:/usr/share/tessdata:Z
