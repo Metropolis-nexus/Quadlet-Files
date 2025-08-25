@@ -30,4 +30,4 @@ SystemCallFilter=~@obsolete
 Restart=always
 
 [Install]
-WantedBy=stalwart.target
+WantedBy=miniflux.target
