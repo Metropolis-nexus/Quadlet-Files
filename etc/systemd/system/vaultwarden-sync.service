@@ -1,0 +1,8 @@
+[Unit]
+Description=Synchronize Vaultwarden certificates
+Requisite=vaultwarden.target
+
+[Service]
+Type=oneshot
+        
+ExecStart=/usr/sbin/systemctl restart vaultwarden

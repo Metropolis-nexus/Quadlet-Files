@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor Vaultwarden certificates
+
+[Path]
+PathChanged=/srv/vaultwarden/certs
+Unit=vaultwarden-sync.service
+
+[Install]
+WantedBy=multi-user.target
