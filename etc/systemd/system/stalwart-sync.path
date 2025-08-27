@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor Stalwart certificates
+
+[Path]
+PathChanged=/etc/letsencrypt/archive/mail.metropolis.nexus
+Unit=stalwart-sync.service
+
+[Install]
+WantedBy=multi-user.target

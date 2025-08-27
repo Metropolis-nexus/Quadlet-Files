@@ -1,0 +1,7 @@
+[Unit]
+Description=Synchronize Stalwart certificates
+Requisite=stalwart.target
+
+[Service]
+Type=oneshot     
+ExecStart=/usr/sbin/systemctl restart stalwart
