@@ -13,7 +13,7 @@ PublishPort=8443:8443/tcp
 Network=vaultwarden.network
 
 Volume=/srv/vaultwarden/vaultwarden:/data:Z
-Volume=/srv/vaultwarden/certs:/certs:Z
+Volume=/srv/vaultwarden/certs:/certs:Z,ro
 ReadOnly=true
 
 EnvironmentFile=/srv/vaultwarden/vaultwarden.env

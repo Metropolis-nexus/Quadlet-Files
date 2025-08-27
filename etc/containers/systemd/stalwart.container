@@ -16,7 +16,7 @@ PublishPort=993:993/tcp
 Network=stalwart.network
 
 Volume=/srv/stalwart/stalwart:/opt/stalwart:Z
-Volume=/etc/letsencrypt:/etc/letsencrypt:Z
+Volume=/etc/letsencrypt:/etc/letsencrypt:Z,ro
 
 NoNewPrivileges=true
 
