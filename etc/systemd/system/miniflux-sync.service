@@ -1,0 +1,7 @@
+[Unit]
+Description=Synchronize Miniflux certificates
+Requisite=miniflux.target
+
+[Service]
+Type=oneshot   
+ExecStart=/usr/sbin/systemctl restart miniflux
