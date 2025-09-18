@@ -1,0 +1,7 @@
+[Unit]
+Description=Redlib stack
+After=multi-user.target rescue.service rescue.target
+Requires=multi-user.target
+
+[Install]
+WantedBy=multi-user.target
