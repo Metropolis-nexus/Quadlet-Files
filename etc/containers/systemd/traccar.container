@@ -6,7 +6,7 @@ Wants=traccar-postgres.service
 
 [Container]
 ContainerName=traccar
-Image=docker.io/traccar/traccar:alpine
+Image=ghcr.io/polarix-containers/traccar:latest
 AutoUpdate=registry
 
 PublishPort=8082:8082/tcp
@@ -15,6 +15,7 @@ Network=traccar.network
 
 Volume=/srv/traccar/traccar/logs:/opt/traccar/logs:Z
 Volume=/srv/traccar/traccar/override:/opt/traccar/override:Z
+ReadOnly=true
 
 EnvironmentFile=/srv/traccar/traccar.env
 User=200018
