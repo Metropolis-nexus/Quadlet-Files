@@ -18,7 +18,7 @@ Group=300001
 NoNewPrivileges=true
 DropCapability=ALL
 
-HealthCmd=wget --spider" -q --tries=1 http://localhost:8080/settings
+HealthCmd=wget --spider -q --tries=1 http://localhost:8080/settings
 HealthInterval=5m
 HealthTimeout=3s
 Notify=healthy
