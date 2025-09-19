@@ -4,7 +4,7 @@ PartOf=redlib.target
 
 [Container]
 ContainerName=redlib
-Image=quay.io/redlib/redlib:latest
+Image=git.ptr.moe/baalajimaestro/redlib:latest
 AutoUpdate=registry
 
 PublishPort=8080:8080
@@ -17,11 +17,6 @@ Group=300001
 
 NoNewPrivileges=true
 DropCapability=ALL
-
-HealthCmd=wget --spider -q --tries=1 http://localhost:8080/settings
-HealthInterval=5m
-HealthTimeout=3s
-Notify=healthy
 
 [Service]
 LockPersonality=true
