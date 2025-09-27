@@ -4,12 +4,13 @@ PartOf=miniflux.target
 
 [Container]
 ContainerName=miniflux-postgres
-Image=ghcr.io/polarix-containers/postgres:17
+Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
 Network=miniflux.network
 
-Volume=/srv/miniflux/postgres:/var/lib/postgresql/data:Z
+Volume=/srv/miniflux/postgres:/var/lib/postgresql/18/docker:Z
+Volume=/srv/miniflux/postgres_dump:/dump:Z
 ReadOnly=true
 Mount=type=tmpfs,tmpfs-size=50M,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/var/run/postgresql
 
