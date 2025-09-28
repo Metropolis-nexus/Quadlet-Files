@@ -4,12 +4,13 @@ PartOf=traccar.target
 
 [Container]
 ContainerName=traccar-postgres
-Image=ghcr.io/polarix-containers/postgres:17
+Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
 Network=traccar.network
 
-Volume=/srv/traccar/postgres:/var/lib/postgresql/data:Z
+Volume=/srv/traccar/postgres:/var/lib/postgresql/18/docker:Z
+Volume=/srv/traccar/postgres_dump:/dump:Z
 ReadOnly=true
 Mount=type=tmpfs,tmpfs-size=50M,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/var/run/postgresql
 
