@@ -4,12 +4,13 @@ PartOf=stalwart.target
 
 [Container]
 ContainerName=stalwart-postgres
-Image=ghcr.io/polarix-containers/postgres:17
+Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
 Network=stalwart.network
 
-Volume=/srv/stalwart/postgres:/var/lib/postgresql/data:Z
+Volume=/srv/stalwart/postgres:/var/lib/postgresql/18/docker:Z
+Volume=/srv/stalwart/postgres_dump:/dump:Z
 ReadOnly=true
 Mount=type=tmpfs,tmpfs-size=50M,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/var/run/postgresql
 
