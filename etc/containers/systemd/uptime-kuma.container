@@ -4,19 +4,23 @@ PartOf=uptime-kuma.target
 
 [Container]
 ContainerName=uptime-kuma
-Image=louislam/uptime-kuma:beta-rootless
+Image=docker.io/louislam/uptime-kuma:beta-slim-rootless
 AutoUpdate=registry
 
 PublishPort=3001:3001/tcp
 Network=uptime-kuma.network
 
 Volume=/srv/uptime-kuma/uptime-kuma:/app/data:Z
+ReadOnly=true
 
 User=300002
 Group=300002
 
 NoNewPrivileges=true
 DropCapability=ALL
+AddCapability=NET_RAW
+
+PodmanArgs=--runtime=runc
 
 [Service]
 LockPersonality=true
