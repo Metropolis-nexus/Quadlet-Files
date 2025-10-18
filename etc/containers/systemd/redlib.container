@@ -8,6 +8,7 @@ Image=git.ptr.moe/baalajimaestro/redlib:latest
 AutoUpdate=registry
 
 PublishPort=8080:8080
+Network=redlib.network
 
 ReadOnly=true
 
