@@ -10,11 +10,22 @@ AutoUpdate=registry
 PublishPort=8080:80/tcp
 Network=signature-pdf.network
 
-Volume=/srv/signature-pdf/signature-pdf:/data:Z
+Volume=/srv/signature-pdf/signature-pdf/data:/data:Z
+Volume=/srv/signature-pdf/signature-pdf/config/apache2.conf:/etc/apache2/sites-available/000-default.conf:ro,Z
+Volume=/srv/signature-pdf/signature-pdf/config/php.ini:/usr/local/etc/php/conf.d/uploads.ini:ro,Z
+Volume=/srv/signature-pdf/signature-pdf/config/config.ini:/usr/local/signaturepdf/config/config.ini:ro,Z
+Volume=/srv/signature-pdf/signature-pdf/logs:/var/log/apache2:Z
+ReadOnly=true
+Mount=type=tmpfs,tmpfs-size=100M,tmpfs-mode=0770,U,noexec,nosuid,nodev,destination=/tmp
 
 EnvironmentFile=/srv/signature-pdf/signature-pdf.env
+User=300004
+Group=300004
 
 NoNewPrivileges=true
+DropCapability=ALL
+
+Entrypoint=apache2-foreground
 
 [Service]
 LockPersonality=true
