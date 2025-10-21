@@ -4,7 +4,7 @@ PartOf=uptime-kuma.target
 
 [Container]
 ContainerName=uptime-kuma
-Image=docker.io/louislam/uptime-kuma:beta-slim-rootless
+Image=docker.io/louislam/uptime-kuma:2-slim-rootless
 AutoUpdate=registry
 
 PublishPort=3001:3001/tcp
