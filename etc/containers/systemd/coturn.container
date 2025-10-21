@@ -12,7 +12,6 @@ Network=host
 Volume=/srv/coturn/coturn/turnserver.conf:/etc/turnserver.conf:Z,ro
 Volume=/srv/coturn/coturn/logs:/var/log/coturn:Z
 Volume=/srv/coturn/certs:/etc/certs:Z,ro
-
 ReadOnly=true
 
 User=300003
