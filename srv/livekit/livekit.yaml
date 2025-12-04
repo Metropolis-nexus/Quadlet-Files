@@ -1,0 +1,26 @@
+port: 7880
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  use_external_ip: false
+  node_ip: 45.90.12.3
+  use_ice_lite: true
+  congestion_control:
+    enabled: true
+  allow_tcp_fallback: true
+  enable_loopback_candidate: false
+  use_mdns: false
+  strict_acks: true
+redis:
+  address: 127.0.0.1:6379
+turn:
+  enabled: true
+  domain: livekit-turn.metropolis.nexus
+  tls_port: 5349
+  udp_port: 3478
+  external_tls: false
+  cert_file: /etc/letsencrypt/live/livekit.metropolis.nexus/fullchain.pem
+  key_file: /etc/letsencrypt/live/livekit.metropolis.nexus/privkey.pem
+keys:
+  Matrix-RTC: REDACTED
