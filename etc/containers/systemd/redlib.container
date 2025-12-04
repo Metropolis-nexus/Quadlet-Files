@@ -4,8 +4,8 @@ PartOf=redlib.target
 
 [Container]
 ContainerName=redlib
-Image=quay.io/redlib/redlib:latest
-#Image=git.ptr.moe/baalajimaestro/redlib:latest
+#Image=quay.io/redlib/redlib:latest
+Image=git.ptr.moe/baalajimaestro/redlib:latest
 AutoUpdate=registry
 
 PublishPort=8080:8080
