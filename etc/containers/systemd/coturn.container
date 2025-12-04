@@ -1,6 +1,8 @@
 [Unit]
 Description=Coturn
 PartOf=coturn.target
+After=coturn-valkey.service
+Wants=coturn-valkey.service
 
 [Container]
 ContainerName=coturn

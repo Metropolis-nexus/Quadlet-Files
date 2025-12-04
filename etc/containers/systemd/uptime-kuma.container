@@ -1,6 +1,8 @@
 [Unit]
 Description=Uptime Kuma
 PartOf=uptime-kuma.target
+After=uptime-kuma-mariadb.service
+Wants=uptime-kuma-mariadb.service
 
 [Container]
 ContainerName=uptime-kuma
