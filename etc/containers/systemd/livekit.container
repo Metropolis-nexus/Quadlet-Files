@@ -11,8 +11,8 @@ AutoUpdate=registry
 
 Network=host
 
-Volume=/etc/letsencrypt:/etc/letsencrypt:Z,ro
 Volume=/srv/livekit/livekit.yaml:/etc/livekit.yaml:Z,ro
+Volume=/srv/livekit/certs:/certs:Z,ro
 ReadOnly=true
 
 User=300010

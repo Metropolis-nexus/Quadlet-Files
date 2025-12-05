@@ -20,7 +20,7 @@ turn:
   tls_port: 5349
   udp_port: 3478
   external_tls: false
-  cert_file: /etc/letsencrypt/live/livekit.metropolis.nexus/fullchain.pem
-  key_file: /etc/letsencrypt/live/livekit.metropolis.nexus/privkey.pem
+  cert_file: /certs/fullchain.pem
+  key_file: /certs/privkey.pem
 keys:
   Matrix-RTC: REDACTED
