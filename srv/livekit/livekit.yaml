@@ -1,4 +1,6 @@
 port: 7880
+redis:
+  address: 127.0.0.1:6379
 rtc:
   tcp_port: 7881
   port_range_start: 50000
@@ -12,8 +14,10 @@ rtc:
   enable_loopback_candidate: false
   use_mdns: false
   strict_acks: true
-redis:
-  address: 127.0.0.1:6379
+keys:
+  REDACTED
+room:
+  auto_create: false
 turn:
   enabled: true
   domain: livekit-turn.metropolis.nexus
@@ -22,5 +26,3 @@ turn:
   external_tls: false
   cert_file: /certs/fullchain.pem
   key_file: /certs/privkey.pem
-keys:
-  Matrix-RTC: REDACTED
