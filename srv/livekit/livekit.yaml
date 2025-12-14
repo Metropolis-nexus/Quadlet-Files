@@ -1,12 +1,12 @@
 port: 7880
 redis:
-  address: 127.0.0.1:6379
+  address: 127.0.0.1:6380
 rtc:
   tcp_port: 7881
-  port_range_start: 50000
-  port_range_end: 60000
+  port_range_start: 30000
+  port_range_end: 40000
   use_external_ip: false
-  node_ip: 45.90.12.3
+  node_ip: 45.90.12.81
   use_ice_lite: true
   congestion_control:
     enabled: true
@@ -21,8 +21,8 @@ room:
 turn:
   enabled: true
   domain: livekit-turn.metropolis.nexus
-  tls_port: 5349
-  udp_port: 3478
+  tls_port: 5350
+  udp_port: 3479
   external_tls: false
   cert_file: /certs/fullchain.pem
   key_file: /certs/privkey.pem

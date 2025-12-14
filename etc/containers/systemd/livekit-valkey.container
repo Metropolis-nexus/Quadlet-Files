@@ -7,7 +7,7 @@ ContainerName=livekit-valkey
 Image=ghcr.io/polarix-containers/valkey:8
 AutoUpdate=registry
 
-PublishPort=127.0.0.1:6379:6379/tcp
+PublishPort=127.0.0.1:6380:6379/tcp
 Network=livekit.network
 
 Volume=/srv/livekit/valkey:/data:Z
