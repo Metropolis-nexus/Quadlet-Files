@@ -20,6 +20,7 @@ NoNewPrivileges=true
 DropCapability=ALL
 
 Exec=--requirepass "REDACTED"
+PodmanArgs=--runtime=crun
 
 [Service]
 LockPersonality=true
