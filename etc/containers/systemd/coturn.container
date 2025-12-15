@@ -23,7 +23,8 @@ NoNewPrivileges=true
 DropCapability=ALL
 AddCapability=NET_BIND_SERVICE
 
-PodmanArgs=--runtime-flag network=host
+#PodmanArgs=--runtime-flag network=host
+PodmanArgs=--runtime=crun
 
 [Service]
 LockPersonality=true

@@ -22,7 +22,8 @@ NoNewPrivileges=true
 DropCapability=ALL
 
 Exec=--config /etc/livekit.yaml
-PodmanArgs=--runtime-flag network=host
+#PodmanArgs=--runtime-flag network=host
+PodmanArgs=--runtime=crun
 
 [Service]
 LockPersonality=true
