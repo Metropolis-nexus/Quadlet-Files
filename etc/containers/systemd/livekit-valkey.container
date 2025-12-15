@@ -19,6 +19,8 @@ Group=200010
 NoNewPrivileges=true
 DropCapability=ALL
 
+Exec=--requirepass "REDACTED"
+
 [Service]
 LockPersonality=true
 ProtectClock=true
