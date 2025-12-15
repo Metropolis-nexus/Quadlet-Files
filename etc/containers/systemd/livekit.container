@@ -15,8 +15,8 @@ Volume=/srv/livekit/livekit.yaml:/etc/livekit.yaml:Z,ro
 Volume=/srv/livekit/certs:/certs:Z,ro
 ReadOnly=true
 
-User=300010
-Group=300010
+User=300011
+Group=300011
 
 NoNewPrivileges=true
 DropCapability=ALL
