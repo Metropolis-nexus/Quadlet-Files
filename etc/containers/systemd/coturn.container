@@ -36,5 +36,16 @@ SystemCallFilter=~@obsolete
 
 Restart=always
 
+CPUQuota=500%
+MemoryAccounting=true
+MemoryHigh=8G
+StartupMemoryHigh=8G
+MemoryMax=10G
+StartupMemoryMax=10G
+SocketBindAllow=tcp:5349
+SocketBindAllow=udp:3478
+SocketBindAllow=udp:49152-65535
+SocketBindDeny=any
+
 [Install]
 WantedBy=coturn.target

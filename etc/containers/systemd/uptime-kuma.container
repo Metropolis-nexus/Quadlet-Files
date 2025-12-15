@@ -34,5 +34,12 @@ SystemCallFilter=~@obsolete
 
 Restart=always
 
+CPUQuota=200%
+MemoryAccounting=true
+MemoryHigh=3G
+StartupMemoryHigh=3G
+MemoryMax=4G
+StartupMemoryMax=4G
+
 [Install]
 WantedBy=uptime-kuma.target

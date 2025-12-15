@@ -35,5 +35,18 @@ SystemCallFilter=~@obsolete
 
 Restart=always
 
+CPUQuota=500%
+MemoryAccounting=true
+MemoryHigh=8G
+StartupMemoryHigh=8G
+MemoryMax=10G
+StartupMemoryMax=10G
+SocketBindAllow=tcp:7880
+SocketBindAllow=tcp:7881
+SocketBindAllow=tcp:5350
+SocketBindAllow=udp:3479
+SocketBindAllow=udp:30000-40000
+SocketBindDeny=any
+
 [Install]
 WantedBy=livekit.target
