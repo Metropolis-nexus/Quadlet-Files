@@ -6,7 +6,7 @@ Wants=stalwart-postgres.service
 
 [Container]
 ContainerName=stalwart
-Image=ghcr.io/stalwartlabs/stalwart:v0.15.4-alpine
+Image=ghcr.io/stalwartlabs/stalwart:v0.15.5-alpine
 AutoUpdate=registry
 
 PublishPort=127.0.0.1:8443:443/tcp
