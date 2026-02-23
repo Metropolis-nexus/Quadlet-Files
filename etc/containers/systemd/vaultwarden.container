@@ -11,6 +11,7 @@ AutoUpdate=registry
 
 PublishPort=8443:8443/tcp
 Network=vaultwarden.network
+Network=vaultwarden-postgres.network
 
 Volume=/srv/vaultwarden/vaultwarden:/data:Z
 Volume=/srv/vaultwarden/certs:/certs:Z,ro

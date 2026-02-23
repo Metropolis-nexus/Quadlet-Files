@@ -11,6 +11,7 @@ AutoUpdate=registry
 
 PublishPort=8080:8080/tcp
 Network=miniflux.network
+Network=miniflux-postgres.network
 
 EnvironmentFile=/srv/miniflux/miniflux.env
 User=300000

@@ -15,6 +15,7 @@ PublishPort=587:587/tcp
 PublishPort=25:25/tcp
 PublishPort=993:993/tcp
 Network=stalwart.network
+Network=stalwart-postgres.network
 
 Volume=/srv/stalwart/stalwart:/opt/stalwart:Z
 Volume=/etc/letsencrypt:/etc/letsencrypt:Z,ro

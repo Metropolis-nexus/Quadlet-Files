@@ -12,6 +12,7 @@ AutoUpdate=registry
 PublishPort=8082:8082/tcp
 PublishPort=5055:5055/tcp
 Network=traccar.network
+Network=traccar-postgres.network
 
 Volume=/srv/traccar/traccar/logs:/opt/traccar/logs:Z
 Volume=/srv/traccar/traccar/override:/opt/traccar/override:Z

@@ -1,0 +1,5 @@
+[Unit]
+Description=Vaultwarden PostgreSQL internal network
+
+[Network]
+Internal=true

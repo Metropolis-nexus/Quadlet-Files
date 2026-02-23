@@ -7,7 +7,7 @@ ContainerName=miniflux-postgres
 Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
-Network=miniflux.network
+Network=miniflux-postgres.network
 
 Volume=/srv/miniflux/postgres:/var/lib/postgresql/18/docker:Z
 Volume=/srv/miniflux/postgres_dump:/dump:Z

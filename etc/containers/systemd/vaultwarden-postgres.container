@@ -7,7 +7,7 @@ ContainerName=vaultwarden-postgres
 Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
-Network=vaultwarden.network
+Network=vaultwarden-postgres.network
 
 Volume=/srv/vaultwarden/postgres:/var/lib/postgresql/18/docker:Z
 Volume=/srv/vaultwarden/postgres_dump:/dump:Z

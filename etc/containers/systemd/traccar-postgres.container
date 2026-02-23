@@ -7,7 +7,7 @@ ContainerName=traccar-postgres
 Image=ghcr.io/polarix-containers/postgres:18
 AutoUpdate=registry
 
-Network=traccar.network
+Network=traccar-postgres.network
 
 Volume=/srv/traccar/postgres:/var/lib/postgresql/18/docker:Z
 Volume=/srv/traccar/postgres_dump:/dump:Z
