@@ -1,0 +1,60 @@
+security:
+  enableLogin: false # set to 'true' to enable login
+  validation: # PDF signature validation settings
+    trust:
+      serverAsAnchor: false # Trust server certificate as anchor for PDF signatures (if configured and self-signed or CA)
+      useSystemTrust: true # Trust Java/OS system trust store for PDF signature validation
+      useMozillaBundle: true # Trust bundled Mozilla CA bundle (~140 CAs) for PDF signature validation
+      useAATL: false # Trust Adobe Approved Trust List (AATL) for PDF signature validation - downloads from Adobe on startup if enabled
+      useEUTL: false # Trust EU Trusted List (EUTL) for eIDAS qualified certificates - downloads LOTL and national TSLs on startup if enabled
+    allowAIA: true # Allow JDK to fetch issuer certificates and revocation information from network (OCSP/CRL/AIA)
+    revocation:
+      mode: ocsp+crl # Revocation checking mode: 'none' (disabled), 'ocsp' (OCSP only), 'crl' (CRL only), 'ocsp+crl' (OCSP with CRL fallback)
+      hardFail: true # Fail validation if revocation status cannot be determined (true=strict, false=soft-fail)
+  xFrameOptions: DENY # X-Frame-Options header value. Options: 'DENY' (default, prevents all framing), 'SAMEORIGIN' (allows framing from same domain), 'DISABLED' (no X-Frame-Options header sent). Note: automatically set to DISABLED when login is disabled
+
+mail:
+  enabled: false
+
+telegram:
+  enabled: false # set to 'true' to enable Telegram bot integration
+
+system:
+  defaultLocale: en-US # set the default language (e.g. 'de-DE', 'fr-FR', etc)
+  googlevisibility: true # 'true' to allow Google visibility (via robots.txt), 'false' to disallow
+  enableAlphaFunctionality: false # set to enable functionality which might need more testing before it fully goes live (this feature might make no changes)
+  showUpdate: false # see when a new update is available
+  showUpdateOnlyAdmin: false # only admins can see when a new update is available, depending on showUpdate it must be set to 'true'
+  showSettingsWhenNoLogin: false # set to 'false' to hide settings button when login is disabled (enableLogin: false). Only applies when login is disabled.
+  customHTMLFiles: false # enable to have files placed in /customFiles/templates override the existing template HTML files
+  enableAnalytics: false # Master toggle for analytics: set to 'true' to enable all analytics, 'false' to disable all analytics, or leave as 'null' to prompt admin on first launch
+  enableDesktopInstallSlide: false # Set to 'false' to hide the desktop app installation slide in the onboarding flow
+  enablePosthog: false # Enable PostHog analytics (open-source product analytics): set to 'true' to enable, 'false' to disable, or 'null' to enable by default when analytics is enabled
+  enableScarf: false # Enable Scarf tracking pixel: set to 'true' to enable, 'false' to disable, or 'null' to enable by default when analytics is enabled
+  enableUrlToPDF: false # Set to 'true' to enable URL to PDF, INTERNAL ONLY, known security issues, should not be used externally
+  disableSanitize: false # set to true to disable Sanitize HTML; (can lead to injections in HTML)
+  maxDPI: 500 # Maximum allowed DPI for PDF to image conversion
+  enableMobileScanner: true # Enable mobile phone QR code upload feature. Requires frontendUrl to be configured.
+  mobileScannerSettings:
+    convertToPdf: true # Automatically convert uploaded images to PDF format. If false, images are kept as-is.
+    imageResolution: full # Image resolution for mobile uploads: 'full' (original size) or 'reduced' (max 1200px on longest side). Only applies when convertToPdf is true.
+    pageFormat: letter # Page format for converted PDFs: 'keep' (original image dimensions), 'A4' (A4 page size), or 'letter' (US Letter page size). Only applies when convertToPdf is true.
+    stretchToFit: false # Whether to stretch images to fill the entire page (may distort aspect ratio). If false, images are centered with preserved aspect ratio. Only applies when convertToPdf is true.
+  serverCertificate:
+    enabled: false # Enable server-side certificate for "Sign with Stirling-PDF" option
+  html:
+    urlSecurity:
+      enabled: true # Enable URL security restrictions for HTML processing
+      level: MAX # Security level: MAX (whitelist only), MEDIUM (block internal networks), OFF (no restrictions)
+  datasource:
+    enableCustomDatabase: false # Enterprise users ONLY, set this property to 'true' if you would like to use your own custom database configuration
+  fileUploadLimit: "100MB" # Defaults to "". No limit when string is empty. Set a number, between 0 and 999, followed by one of the following strings to set a limit. "KB", "MB", "GB".
+
+ui:
+  appNameNavbar: "Metropolis PDF" # name displayed on the navigation bar
+  logoStyle: modern # Options: 'classic' (default - classic S icon) or 'modern' (minimalist logo)
+  defaultHideUnavailableTools: true # Default user preference: hide disabled tools instead of greying them out
+  defaultHideUnavailableConversions: true # Default user preference: hide disabled conversion options instead of greying them out
+
+metrics:
+  enabled: false # 'true' to enable Info APIs (`/api/*`) endpoints, 'false' to disable
