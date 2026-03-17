@@ -6,7 +6,7 @@ Wants=uptime-kuma-mariadb.service
 
 [Container]
 ContainerName=uptime-kuma
-Image=docker.io/louislam/uptime-kuma:2-slim-rootless
+Image=dhi.io/uptime-kuma:2
 AutoUpdate=registry
 
 PublishPort=3001:3001/tcp
