@@ -15,13 +15,12 @@ Network=documenso-postgres.network
 
 ReadOnly=true
 
+EnvironmentFile=/srv/documenso/documenso.env
 User=300021
 Group=300021
 
 NoNewPrivileges=true
 DropCapability=ALL
-
-EnvironmentFile=/srv/documenso/documenso.env
 
 [Service]
 LockPersonality=true
