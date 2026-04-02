@@ -6,12 +6,15 @@ Wants=miniflux-postgres.service
 
 [Container]
 ContainerName=miniflux
-Image=docker.io/miniflux/miniflux:latest-distroless
+Image=docker.io/miniflux/miniflux:latest
 AutoUpdate=registry
 
-PublishPort=8080:8080/tcp
+PublishPort=8443:8443/tcp
 Network=miniflux.network
 Network=miniflux-postgres.network
+
+Volume=/srv/miniflux/certs:/certs:Z,ro
+ReadOnly=true
 
 EnvironmentFile=/srv/miniflux/miniflux.env
 User=300000
