@@ -6,7 +6,7 @@ Wants=miniflux-postgres.service
 
 [Container]
 ContainerName=miniflux
-Image=docker.io/miniflux/miniflux:latest
+Image=docker.io/miniflux/miniflux:latest-distroless
 AutoUpdate=registry
 
 PublishPort=8443:8443/tcp
