@@ -22,6 +22,11 @@ DropCapability=ALL
 Exec=--requirepass "REDACTED"
 PodmanArgs=--runtime=crun
 
+HealthCmd=valkey-cli ping | grep PONG
+HealthInterval=15s
+HealthTimeout=5s
+Notify=healthy
+
 [Service]
 LockPersonality=true
 ProtectClock=true
