@@ -1,0 +1,7 @@
+[Unit]
+Description=Synchronize Forgejo certificates
+Requisite=forgejo.target
+
+[Service]
+Type=oneshot   
+ExecStart=/usr/sbin/systemctl restart forgejo

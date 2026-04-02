@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor Forgejo certificates
+
+[Path]
+PathChanged=/srv/forgejo/certs
+Unit=forgejo-sync.service
+
+[Install]
+WantedBy=multi-user.target
