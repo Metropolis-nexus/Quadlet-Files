@@ -1,0 +1,5 @@
+[Unit]
+Description=Forgejo Valkey internal network
+
+[Network]
+Internal=true

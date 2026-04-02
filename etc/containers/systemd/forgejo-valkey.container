@@ -1,0 +1,37 @@
+[Unit]
+Description=Forgejo Valkey
+PartOf=forgejo.target
+
+[Container]
+ContainerName=forgejo-valkey
+Image=ghcr.io/polarix-containers/valkey:9
+AutoUpdate=registry
+
+Network=forgejo-valkey.network
+
+Volume=/srv/forgejo/valkey:/data:Z
+ReadOnly=true
+
+User=200010
+Group=200010
+
+NoNewPrivileges=true
+DropCapability=ALL
+
+HealthCmd=valkey-cli ping | grep PONG
+HealthInterval=15s
+HealthTimeout=5s
+Notify=healthy
+
+[Service]
+LockPersonality=true
+ProtectClock=true
+RestrictRealtime=true
+RuntimeDirectoryMode=700
+SystemCallArchitectures=native
+SystemCallFilter=~@obsolete
+
+Restart=always
+
+[Install]
+WantedBy=forgejo.target

@@ -3,6 +3,8 @@ Description=Forgejo
 PartOf=forgejo.target
 After=forgejo-postgres.service
 Wants=forgejo-postgres.service
+After=forgejo-valkey.service
+Wants=forgejo-valkey.service
 
 [Container]
 ContainerName=forgejo
