@@ -20,13 +20,12 @@ Network=forgejo-valkey.network
 Volume=/srv/forgejo/forgejo:/var/lib/gitea:Z
 ReadOnly=true
 
+EnvironmentFile=/srv/forgejo/forgejo.env
 User=300020
 Group=300020
 
 NoNewPrivileges=true
 DropCapability=ALL
-
-EnvironmentFile=/srv/forgejo/forgejo.env
 
 [Service]
 LockPersonality=true
