@@ -1,0 +1,5 @@
+[Unit]
+Description=Paperless-ngx Postgres internal network
+
+[Network]
+Internal=true

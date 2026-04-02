@@ -1,0 +1,37 @@
+[Unit]
+Description=Paperless-ngx Valkey
+PartOf=paperless-ngx.target
+
+[Container]
+ContainerName=paperless-ngx-valkey
+Image=ghcr.io/polarix-containers/valkey:9
+AutoUpdate=registry
+
+Network=paperless-ngx-valkey.network
+
+Volume=/srv/paperless-ngx/valkey:/data:Z
+ReadOnly=true
+
+User=200010
+Group=200010
+
+NoNewPrivileges=true
+DropCapability=ALL
+
+HealthCmd=valkey-cli ping | grep PONG
+HealthInterval=15s
+HealthTimeout=5s
+Notify=healthy
+
+[Service]
+LockPersonality=true
+ProtectClock=true
+RestrictRealtime=true
+RuntimeDirectoryMode=700
+SystemCallArchitectures=native
+SystemCallFilter=~@obsolete
+
+Restart=always
+
+[Install]
+WantedBy=paperless-ngx.target
