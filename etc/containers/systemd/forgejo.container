@@ -15,6 +15,7 @@ PublishPort=3000:3000/tcp
 PublishPort=222:2222/tcp
 Network=forgejo.network
 Network=forgejo-postgres.network
+Network=forgejo-valkey.network
 
 Volume=/srv/forgejo/forgejo:/var/lib/gitea:Z
 ReadOnly=true
