@@ -13,11 +13,11 @@ PublishPort=3000:3000/tcp
 Network=documenso.network
 Network=documenso-postgres.network
 
-ReadOnly=true
+Volume=/srv/documenso/certs/certificate.p12:/certs/certificate.p12:Z,ro
 
 EnvironmentFile=/srv/documenso/documenso.env
-User=300021
-Group=300021
+User=1001
+Group=1001
 
 NoNewPrivileges=true
 DropCapability=ALL
