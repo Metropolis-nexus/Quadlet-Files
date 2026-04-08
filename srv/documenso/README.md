@@ -10,3 +10,27 @@ documenso=# UPDATE "User" SET roles = '{ADMIN}' WHERE email = 'akadmin@auth.metr
 documenso=# exit
 / $ exit
 ```
+
+# Postgres Optimizations
+
+Adjust `/srv/documenso/postgres/postgresql.conf` to include these optimizations:
+
+```
+# https://docs.documenso.com/docs/self-hosting/configuration/database#monitoring
+
+shared_buffers = 1GB
+effective_cache_size = 3GB
+work_mem = 64MB
+maintenance_work_mem = 512MB
+max_connections = 100
+```
+
+If running directly on ZFS, also include these optimizations:
+
+```
+# https://vadosware.io/post/everything-ive-seen-on-optimizing-postgres-on-zfs-on-linux/
+
+full_page_writes = off
+wal_init_zero = off
+wal_recycle = off
+```
