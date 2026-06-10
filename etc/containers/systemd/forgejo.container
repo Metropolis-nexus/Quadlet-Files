@@ -8,7 +8,7 @@ Wants=forgejo-valkey.service
 
 [Container]
 ContainerName=forgejo
-Image=codeberg.org/forgejo/forgejo:14-rootless
+Image=codeberg.org/forgejo/forgejo:15-rootless
 AutoUpdate=registry
 
 PublishPort=3000:3000/tcp
