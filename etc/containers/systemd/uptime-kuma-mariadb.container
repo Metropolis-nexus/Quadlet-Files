@@ -4,7 +4,7 @@ PartOf=uptime-kuma.target
 
 [Container]
 ContainerName=uptime-kuma-mariadb
-Image=ghcr.io/polarix-containers/mariadb:11.4-alpine
+Image=ghcr.io/polarix-containers/mariadb:11.8-alpine
 AutoUpdate=registry
 
 Network=uptime-kuma.network
